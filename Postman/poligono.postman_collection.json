@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "ef380ae2-2c0e-4a40-af2c-fcdc1a9f4354",
+		"name": " poligono",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "oapi",
+			"item": [
+				{
+					"name": "web",
+					"item": [
+						{
+							"name": "Cadastra Triangulo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nome",
+											"value": "b",
+											"type": "text"
+										},
+										{
+											"key": "altura",
+											"value": "30",
+											"type": "text"
+										},
+										{
+											"key": "base",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "a",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "b",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "c",
+											"value": "14",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:7081/oapi/web/cadastro/poligono/triangulo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"oapi",
+										"web",
+										"cadastro",
+										"poligono",
+										"triangulo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cadastra Retangulo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "nome",
+											"value": "b",
+											"type": "text"
+										},
+										{
+											"key": "altura",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "base",
+											"value": "30",
+											"type": "text"
+										},
+										{
+											"key": "a1",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "a2",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "b1",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "b2",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:7081/oapi/web/cadastro/poligono/retangulo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"oapi",
+										"web",
+										"cadastro",
+										"poligono",
+										"retangulo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Soma Area Poligonos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:7081/oapi/web/retorna/poligono/total/area/plonigonos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"oapi",
+										"web",
+										"retorna",
+										"poligono",
+										"total",
+										"area",
+										"plonigonos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Soma Area Tiangulos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:7081/oapi/web/retorna/poligono/total/area/triangulos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"oapi",
+										"web",
+										"retorna",
+										"poligono",
+										"total",
+										"area",
+										"triangulos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Soma Area Retangulos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:7081/oapi/web/retorna/poligono/total/area/retangulos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7081",
+									"path": [
+										"oapi",
+										"web",
+										"retorna",
+										"poligono",
+										"total",
+										"area",
+										"retangulos"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

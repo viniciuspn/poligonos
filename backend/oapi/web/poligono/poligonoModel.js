@@ -3,6 +3,23 @@ const clienteSql = require('../../../scriptsSQL/web/poligonoWeb')();
 
 module.exports = function () {
 
+    function validaTriangulo(a, b, c) {
+        a = parseInt(a);
+        b = parseInt(b);
+        c = parseInt(c);
+
+        var tringulo = null;
+        /*
+        | b - c | < a < b + c
+        | a - c | < b < a + c
+        | a - b | < c < a + b
+        */
+        if (((a - b) < a < (b + c)) && ((a - c) < b < (a + c)) && ((a - b) < c < (a + b))) {
+            tringulo = true;
+        };
+
+        return tringulo;
+    };
 
 
 
@@ -13,8 +30,9 @@ module.exports = function () {
         };
 
         dados.base = parseInt(dados.base);
-        dados.altura = parseInt (dados.altura);
-        var area = ((dados.base * dados.altura)/2);
+        dados.altura = parseInt(dados.altura);
+        //A = (b . h) /2
+        var area = ((dados.base * dados.altura) / 2);
         let promise = await clienteSql.inseriTriangulo(dados, area)
             .then(function (rowsInseriTriangulo) {
                 retorno.sucessoDados = true;
@@ -27,6 +45,22 @@ module.exports = function () {
 
     };
 
+
+    function validaRetangulo(a1, a2, b1, b2) {
+        a1 = parseInt(a1);
+        a2 = parseInt(a2);
+        b1 = parseInt(b1);
+        b2 = parseInt(b2);
+
+        var retangulo = null;
+
+        if ((a1 === a2) && (b1 === b2) && (a1!=b1) && (a2!=b2)) {
+            retangulo = true;
+        };
+
+        return retangulo;
+    };
+
     async function inserirRetangulo(dados) {
         let retorno = {
             sucessoDados: false,
@@ -34,7 +68,8 @@ module.exports = function () {
         };
 
         dados.base = parseInt(dados.base);
-        dados.altura = parseInt (dados.altura);
+        dados.altura = parseInt(dados.altura);
+        //A = b . h
         var area = (dados.base * dados.altura);
         let promise = await clienteSql.inseriRetangulo(dados, area)
             .then(function (rowsInseriRetangulo) {
@@ -90,11 +125,13 @@ module.exports = function () {
         return retorno;
 
     };
-    
+
 
 
     return {
+        validaTriangulo: validaTriangulo,
         inserirTriangulo: inserirTriangulo,
+        validaRetangulo: validaRetangulo,
         inserirRetangulo: inserirRetangulo,
         somarTriangulo: somarTriangulo,
         somarRetangulo: somarRetangulo

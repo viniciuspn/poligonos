@@ -25,15 +25,15 @@ Urls:
 --------------Triangulo-----------------------
 Url: http://localhost:7081/oapi/web/cadastro/poligono/triangulo
 Metodo: post
-Encaminhar para o backand: nome, nom e nome via body;
-campo obrigatorio: nome, nom e nome;
+Encaminhar para o backand: nome, altura, base, a, b e c via body;
+campo obrigatorio: nome, altura, base, a, b e c;
 Ação: Cadastro de Triangulo
 
 --------------Retangulo-----------------------
 Url: http://localhost:7081/oapi/web/cadastro/poligono/retangulo
 Metodo: post
-Encaminhar para o backand: nome, nom e nome via body;
-campo obrigatorio: nome, nom e nome;
+Encaminhar para o backand: nome, altura, base, a1, a2, b1 e b2 via body;
+campo obrigatorio: nome, altura, base, a1, a2, b1 e b2;
 Ação: Cadastro de Retangulo
 
 --------------Soma Area poligonos-----------------------
@@ -46,14 +46,14 @@ Ação: Soma da area de todos Poligonos cadastros
 --------------Soma Area Triangulo-----------------------
 Url: http://localhost:7081/oapi/web/retorna/poligono/total/area/triangulos
 Metodo: get
-Encaminhar para o backand: nome, nom e nome via body;
-campo obrigatorio: nome, nom e nome;
+Encaminhar para o backand: 
+campo obrigatorio: 
 Ação: Soma da area de todos Triangulo cadastros
 
 --------------Soma Area Retangulo-----------------------
 Url: http://localhost:7081/oapi/web/retorna/poligono/total/area/retangulos
 Metodo: get
-Encaminhar para o backand: nome, nom e nome via body;
-campo obrigatorio: nome, nom e nome;
+Encaminhar para o backand: 
+campo obrigatorio: 
 Ação: Soma da area de todos Retangulo cadastros
 
