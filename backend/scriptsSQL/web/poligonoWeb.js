@@ -24,9 +24,24 @@ module.exports = function () {
             });
     };
 
+    function somaTriangulo() {
+        return connPoligono('triangulos')
+            .sum('triangulo_area as total');
+    };
+
+    function somaRetangulo() {
+        return connPoligono('retangulos')
+            .sum('retangulo_area as total');
+    };
+
+
+
+
     return {
         inseriTriangulo: inseriTriangulo,
-        inseriRetangulo: inseriRetangulo
+        inseriRetangulo: inseriRetangulo,
+        somaTriangulo: somaTriangulo,
+        somaRetangulo: somaRetangulo
     };
 
 };

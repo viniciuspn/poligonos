@@ -47,11 +47,56 @@ module.exports = function () {
         return retorno;
 
     };
+
+
+    async function somarTriangulo() {
+        let retorno = {
+            totalAreaTriangulo: 0,
+            error: undefined
+        };
+        let promise = await clienteSql.somaTriangulo()
+            .then(function (rows) {
+                _.each(rows, function (result) {
+                    if (result.total) {
+                        retorno.totalAreaTriangulo = result.total;
+                    }
+                });
+            })
+            .catch(function (error) {
+                retorno.error = error;
+            })
+
+        return retorno;
+
+    };
+
+    async function somarRetangulo() {
+        let retorno = {
+            totalAreaRetangulo: 0,
+            error: undefined
+        };
+        let promise = await clienteSql.somaRetangulo()
+            .then(function (rows) {
+                _.each(rows, function (result) {
+                    if (result.total) {
+                        retorno.totalAreaRetangulo = result.total;
+                    }
+                });
+            })
+            .catch(function (error) {
+                retorno.error = error;
+            })
+
+        return retorno;
+
+    };
     
 
 
     return {
         inserirTriangulo: inserirTriangulo,
-        inserirRetangulo: inserirRetangulo
+        inserirRetangulo: inserirRetangulo,
+        somarTriangulo: somarTriangulo,
+        somarRetangulo: somarRetangulo
     }
 };
