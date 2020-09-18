@@ -1,0 +1,38 @@
+Para executar aplicação é necessário ter o node js, npm  e SQLite3  instalado em sua máquina.
+Link para dowload 
+node 8.9.4: https://nodejs.org/en/download/
+SQLite3: https://www.sqlite.org/download.html
+
+Instalação no Linux​​ :
+acesso terminal e digite o seguintes comandos abaixo:
+Instalar node js​​ :
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+
+Instalar o SQLite3
+apt install sqlite3
+apt install libsqlite3-dev
+apt install sqlitebrowser
+
+
+Após a instalação acessar a pasta do projeto e instalar as dependências utilize o comando ‘npm install’
+Após a instalação das dependência execute o comando 'npm run dev’ para levantar o serviço.
+
+
+Urls:
+
+--------------Triangulo-----------------------
+Url: http://localhost:7081/oapi/web/cadastro/poligono/triangulo
+Metodo: post
+Encaminhar para o backand: nome, nom e nome via body;
+campo obrigatorio: nome, nom e nome;
+Ação: Cadastro de Triangulo
+
+--------------Retangulo-----------------------
+Url: http://localhost:7081/oapi/web/cadastro/poligono/retangulo
+Metodo: post
+Encaminhar para o backand: nome, nom e nome via body;
+campo obrigatorio: nome, nom e nome;
+Ação: Cadastro de Retangulo
+
