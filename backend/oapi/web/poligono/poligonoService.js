@@ -122,7 +122,7 @@ poligono.get('/retorna/poligono/total/area/plonigonos', async function (req, res
             res.status(200);
             res.send({
                 codigo: 8,
-                data: { 'Atera total': totalAreaTriangulo.totalAreaTriangulo + totalAreaRetangulo.totalAreaRetangulo },
+                Total: totalAreaTriangulo.totalAreaTriangulo + totalAreaRetangulo.totalAreaRetangulo,
                 message: 'Sucesso na soma das Areas Plonigonos'
             });
         }
@@ -143,7 +143,7 @@ poligono.get('/retorna/poligono/total/area/triangulos', async function (req, res
         res.status(200);
         res.send({
             codigo: 10,
-            data: { 'Atera total': totalAreaTriangulo.totalAreaTriangulo },
+            Total:totalAreaTriangulo.totalAreaTriangulo,
             message: 'Sucesso na soma das Areas Triangulos'
         });
 
@@ -164,7 +164,7 @@ poligono.get('/retorna/poligono/total/area/retangulos', async function (req, res
         res.status(200);
         res.send({
             codigo: 12,
-            data: { 'Atera total': totalAreaRetangulo.totalAreaRetangulo },
+            Total: totalAreaRetangulo.totalAreaRetangulo,
             message: 'Sucesso na soma das Areas retangulos'
         });
     }

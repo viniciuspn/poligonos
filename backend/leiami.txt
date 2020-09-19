@@ -16,8 +16,10 @@ apt install libsqlite3-dev
 apt install sqlitebrowser
 
 
-Após a instalação acessar a pasta do projeto e instalar as dependências utilize o comando ‘npm install’
-Após a instalação das dependência execute o comando 'npm run dev’ para levantar o serviço.
+Após a instalação acessar a pasta do projeto pelo terminal e execute o seguintes comandos: 
+1 - Instalar as dependências utilize: ‘npm install’
+2 - Levantar o serviço: 'npm run dev’
+3 - Teste: mocha
 
 
 Urls:
@@ -56,4 +58,3 @@ Metodo: get
 Encaminhar para o backand: 
 campo obrigatorio: 
 Ação: Soma da area de todos Retangulo cadastros
-
