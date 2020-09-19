@@ -10,7 +10,7 @@ describe("Teste API Poligos", function () {
   it("Total Poligonos Consulta sucesso", function (done) {
     request.get(
       {
-        url: urlBase + "/retorna/poligono/total/area/plonigonos"
+        url: urlBase + "/retorna/poligono/total/area/poligonos"
       },
       function (error, response, body) {
         var _body = {};
@@ -27,7 +27,7 @@ describe("Teste API Poligos", function () {
             expect(_body.codigo).to.equal(8);
           }
           if (_body.should.have.property('message')) {
-            expect(_body.message).to.equal('Sucesso na soma das Areas Plonigonos');
+            expect(_body.message).to.equal('Sucesso na soma das Areas Poligonos');
           }
 
         }

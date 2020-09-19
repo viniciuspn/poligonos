@@ -101,7 +101,7 @@ poligono.post('/cadastro/poligono/retangulo', async function (req, res, next) {
 
 });
 
-poligono.get('/retorna/poligono/total/area/plonigonos', async function (req, res, next) {
+poligono.get('/retorna/poligono/total/area/poligonos', async function (req, res, next) {
 
     var totalAreaTriangulo = await poligonoModel.somarTriangulo();
     if (totalAreaTriangulo.error) {
@@ -123,7 +123,7 @@ poligono.get('/retorna/poligono/total/area/plonigonos', async function (req, res
             res.send({
                 codigo: 8,
                 Total: totalAreaTriangulo.totalAreaTriangulo + totalAreaRetangulo.totalAreaRetangulo,
-                message: 'Sucesso na soma das Areas Plonigonos'
+                message: 'Sucesso na soma das Areas Poligonos'
             });
         }
     }
